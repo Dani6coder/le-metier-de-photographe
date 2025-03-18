@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - Le Métier de Photographe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <h1>Le Métier de Photographe</h1>
+            <p>Capturons ensemble vos plus beaux moments</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="logo">LMDP</div>
+        <div class="nav-links">
+            <a href="actualites.html">Accueil</a>
+            <a href="galerie.html" class="active">Galerie</a>
+            <a href="reservation.html">Réservation</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <main class="gallery-page">
+        <div class="gallery-hero">
+            <h1>Notre Galerie</h1>
+            <p>Découvrez nos plus belles photos et laissez-vous inspirer</p>
+        </div>
+
+        <div class="gallery-categories">
+            <button class="category-btn active" data-category="all">Tout</button>
+            <button class="category-btn" data-category="portrait">Portrait</button>
+            <button class="category-btn" data-category="famille">Famille</button>
+            <button class="category-btn" data-category="mariage">Mariage</button>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- Portrait -->
+            <div class="gallery-item" data-category="portrait">
+                <img src="image/Site-internet-photographe.jpg" alt="Portrait 1">
+                <div class="gallery-overlay">
+                    <h3>Portrait Artistique</h3>
+                    <p>Séance photo portrait en studio</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="portrait">
+                <img src="concours3.jpg" alt="Portrait 2">
+                <div class="gallery-overlay">
+                    <h3>Portrait Naturel</h3>
+                    <p>Séance photo en extérieur</p>
+                </div>
+            </div>
+
+            <!-- Famille -->
+            <div class="gallery-item" data-category="famille">
+                <img src="image/Site-internet-photographe3.jpg" alt="Famille 1">
+                <div class="gallery-overlay">
+                    <h3>Moment en Famille</h3>
+                    <p>Séance photo famille au parc</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="famille">
+                <img src="image/Site-internet-photographe.jpg" alt="Famille 2">
+                <div class="gallery-overlay">
+                    <h3>Portrait de Famille</h3>
+                    <p>Séance photo famille en studio</p>
+                </div>
+            </div>
+
+            <!-- Mariage -->
+            <div class="gallery-item" data-category="mariage">
+                <img src="image/Site-internet-photographe2.jpg" alt="Mariage 1">
+                <div class="gallery-overlay">
+                    <h3>Mariage Élégant</h3>
+                    <p>Photos de mariage en extérieur</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="mariage">
+                <img src="image/Site-internet-photographe3.jpg" alt="Mariage 2">
+                <div class="gallery-overlay">
+                    <h3>Mariage Intime</h3>
+                    <p>Photos de mariage en intérieur</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-cta">
+            <h2>Vous souhaitez immortaliser vos moments précieux ?</h2>
+            <p>Contactez-nous pour réserver votre séance photo</p>
+            <a href="reservation.html" class="btn">Réserver une séance</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-phone"></i> +33 6 12 34 56 78</p>
+                <p><i class="fas fa-envelope"></i> contact@lemetierdephotographe.fr</p>
+                <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Le Métier de Photographe. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concours Photo - Le Métier de Photographe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <h1>Le Métier de Photographe</h1>
+            <p>Capturons ensemble vos plus beaux moments</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="logo">Photographe</div>
+        <ul class="nav-links">
+            <li><a href="actualites.html">Accueil</a></li>
+            <li class="dropdown">
+                <a href="galeries.html">Galeries <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="galeries.html#portraits">Portraits</a></li>
+                    <li><a href="galeries.html#mariages">Mariages</a></li>
+                    <li><a href="galeries.html#evenements">Événements</a></li>
+                </ul>
+            </li>
+            <li><a href="reservation.html">Réservation</a></li>
+            <li><a href="concours.html">Concours</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <main class="concours-page">
+        <section class="concours-hero">
+            <div class="hero-content">
+                <h1>Concours Photo Mensuel</h1>
+                <p>Partagez votre vision et gagnez des prix exceptionnels</p>
+            </div>
+        </section>
+
+        <section class="concours-details">
+            <div class="concours-info">
+                <h2>Thème du mois : "La Nature en Noir et Blanc"</h2>
+                <div class="concours-timer">
+                    <div class="timer-item">
+                        <span class="number">15</span>
+                        <span class="label">Jours</span>
+                    </div>
+                    <div class="timer-item">
+                        <span class="number">12</span>
+                        <span class="label">Heures</span>
+                    </div>
+                    <div class="timer-item">
+                        <span class="number">45</span>
+                        <span class="label">Minutes</span>
+                    </div>
+                    <div class="timer-item">
+                        <span class="number">30</span>
+                        <span class="label">Secondes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="concours-rules">
+                <h2>Règles du Concours</h2>
+                <ul>
+                    <li>Une seule photo par participant</li>
+                    <li>Format : Noir et blanc uniquement</li>
+                    <li>Résolution minimale : 3000x2000 pixels</li>
+                    <li>Date limite : 31 mars 2024</li>
+                    <li>Les photos doivent être originales</li>
+                    <li>Si la photo contient des personnes, une déclaration de modèle est obligatoire</li>
+                </ul>
+            </div>
+
+            <div class="concours-submission">
+                <h2>Participer au Concours</h2>
+                <form class="submission-form">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo">Vos photos (maximum 3)</label>
+                        <div class="photo-upload-container">
+                            <div class="photo-upload-box" id="photo1">
+                                <input type="file" class="photo-input" accept="image/*" required>
+                                <div class="upload-placeholder">
+                                    <i class="fas fa-camera"></i>
+                                    <span>Photo 1</span>
+                                </div>
+                                <div class="preview-container"></div>
+                            </div>
+                            <div class="photo-upload-box" id="photo2">
+                                <input type="file" class="photo-input" accept="image/*">
+                                <div class="upload-placeholder">
+                                    <i class="fas fa-camera"></i>
+                                    <span>Photo 2</span>
+                                </div>
+                                <div class="preview-container"></div>
+                            </div>
+                            <div class="photo-upload-box" id="photo3">
+                                <input type="file" class="photo-input" accept="image/*">
+                                <div class="upload-placeholder">
+                                    <i class="fas fa-camera"></i>
+                                    <span>Photo 3</span>
+                                </div>
+                                <div class="preview-container"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description de vos photos</label>
+                        <textarea id="description" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="model-declaration">
+                        <h3>Déclaration de Modèle</h3>
+                        <div class="form-group">
+                            <label for="hasModel">La photo contient-elle des personnes ?</label>
+                            <select id="hasModel" required>
+                                <option value="">Sélectionnez une option</option>
+                                <option value="yes">Oui</option>
+                                <option value="no">Non</option>
+                            </select>
+                        </div>
+                        
+                        <div id="modelButtonContainer" style="display: none;">
+                            <button type="button" class="declare-model-btn" onclick="openModelModal()">
+                                <i class="fas fa-user-plus"></i> Déclarer le modèle
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="model-button-container">
+                        <button type="button" class="model-btn" id="modelDeclarationBtn" onclick="window.location.href='modele.html'">
+                            <i class="fas fa-user"></i> Modèle
+                        </button>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">J'accepte les règles du concours</label>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-paper-plane"></i> Soumettre ma photo
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal pour la déclaration du modèle -->
+    <div id="modelModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModelModal()">&times;</span>
+            <h2>Déclaration du Modèle</h2>
+            <form id="modelForm">
+                <div class="form-group">
+                    <label for="modelFirstName">Prénom du modèle</label>
+                    <input type="text" id="modelFirstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="modelLastName">Nom du modèle</label>
+                    <input type="text" id="modelLastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="modelAge">Âge du modèle</label>
+                    <input type="number" id="modelAge" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="modelGender">Sexe du modèle</label>
+                    <select id="modelGender" required>
+                        <option value="">Sélectionnez une option</option>
+                        <option value="male">Masculin</option>
+                        <option value="female">Féminin</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="modelIdFront">Pièce d'identité (recto)</label>
+                    <input type="file" id="modelIdFront" accept="image/*,.pdf" required>
+                    <small class="form-text">Format accepté : JPG, PNG, PDF. Taille maximale : 5MB</small>
+                </div>
+                <div class="form-group">
+                    <label for="modelIdBack">Pièce d'identité (verso)</label>
+                    <input type="file" id="modelIdBack" accept="image/*,.pdf" required>
+                    <small class="form-text">Format accepté : JPG, PNG, PDF. Taille maximale : 5MB</small>
+                </div>
+                <div class="form-group">
+                    <label for="modelConsent">Déclaration de consentement</label>
+                    <textarea id="modelConsent" rows="3" required placeholder="Je soussigné(e) [nom du modèle] déclare avoir donné mon consentement pour la publication de cette photo dans le cadre du concours photo."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="modelSignature">Signature du modèle</label>
+                    <input type="file" id="modelSignature" accept="image/*" required>
+                </div>
+                <button type="submit" class="submit-button">
+                    <i class="fas fa-check"></i> Valider la déclaration
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@photographe.fr</p>
+                <p>Tél: +33 1 23 45 67 89</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Le Métier de Photographe. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

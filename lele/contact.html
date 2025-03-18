@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Métier de Photographe - Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Photographe</div>
+        <ul class="nav-links">
+            <li><a href="actualites.html">Accueil</a></li>
+            <li class="dropdown">
+                <a href="galeries.html">Galeries <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="galeries.html#portraits">Portraits</a></li>
+                    <li><a href="galeries.html#mariages">Mariages</a></li>
+                    <li><a href="galeries.html#evenements">Événements</a></li>
+                </ul>
+            </li>
+            <li><a href="reservation.html">Réservation</a></li>
+            <li><a href="concours.html">Concours</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <section class="contact-hero">
+        <h1>Contactez-nous</h1>
+        <p>Nous sommes là pour répondre à toutes vos questions</p>
+    </section>
+
+    <section class="contact-content">
+        <div class="contact-info">
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Adresse</h3>
+                <p>123 Rue de la Photographie<br>75001 Paris, France</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-phone"></i>
+                <h3>Téléphone</h3>
+                <p>+33 1 23 45 67 89</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>contact@photographe.fr</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-clock"></i>
+                <h3>Horaires</h3>
+                <p>Lundi - Vendredi: 9h - 19h<br>Samedi: 10h - 18h<br>Dimanche: Fermé</p>
+            </div>
+        </div>
+
+        <div class="contact-form-container">
+            <h2>Envoyez-nous un message</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Nom complet" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Téléphone" required>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Type de demande</option>
+                        <option value="information">Demande d'information</option>
+                        <option value="devis">Demande de devis</option>
+                        <option value="rendez-vous">Prise de rendez-vous</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Votre message" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Envoyer le message</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <h2>Notre Localisation</h2>
+        <div class="map-container">
+            <!-- Ici, vous pouvez intégrer une carte Google Maps ou autre service de cartographie -->
+            <div class="map-placeholder">
+                <p>La carte sera affichée ici</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2>Restez en Contact</h2>
+        <p>Inscrivez-vous à notre newsletter pour recevoir nos actualités et offres spéciales</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Votre email" required>
+            <button type="submit" class="submit-button">S'inscrire</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@photographe.fr</p>
+                <p>Tél: +33 1 23 45 67 89</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Le Métier de Photographe. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

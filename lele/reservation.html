@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation - Le Métier de Photographe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <h1>Le Métier de Photographe</h1>
+            <p>Capturons ensemble vos plus beaux moments</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="logo">LMDP</div>
+        <div class="nav-links">
+            <a href="actualites.html">Accueil</a>
+            <li class="dropdown">
+                <a href="galeries.html">Galeries <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="galeries.html#portraits">Portraits</a></li>
+                    <li><a href="galeries.html#mariages">Mariages</a></li>
+                    <li><a href="galeries.html#evenements">Événements</a></li>
+                </ul>
+            </li>
+            <a href="reservation.html" class="active">Réservation</a>
+            <a href="concours.html">Concours</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <main class="reservation-page">
+        <div class="reservation-hero">
+            <div class="hero-content">
+                <h2>Réservez votre séance photo</h2>
+                <p>Choisissez le forfait qui vous correspond et réservez votre créneau</p>
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-camera"></i>
+                        <span>Équipement professionnel</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <span>Flexibilité des horaires</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-star"></i>
+                        <span>Service premium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reservation-content">
+            <div class="forfaits-grid">
+                <div class="forfait-card">
+                    <div class="forfait-header">
+                        <i class="fas fa-user"></i>
+                        <h3>Portrait</h3>
+                        <div class="price">À partir de 150€</div>
+                    </div>
+                    <ul class="forfait-features">
+                        <li><i class="fas fa-check"></i> 1h de séance</li>
+                        <li><i class="fas fa-check"></i> 20 photos retouchées</li>
+                        <li><i class="fas fa-check"></i> Galerie privée en ligne</li>
+                        <li><i class="fas fa-check"></i> Livraison numérique</li>
+                        <li><i class="fas fa-check"></i> 5 photos en haute résolution</li>
+                    </ul>
+                    <a href="#reservation-form" class="btn">Réserver</a>
+                </div>
+
+                <div class="forfait-card featured">
+                    <div class="forfait-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Famille</h3>
+                        <div class="price">À partir de 250€</div>
+                    </div>
+                    <ul class="forfait-features">
+                        <li><i class="fas fa-check"></i> 2h de séance</li>
+                        <li><i class="fas fa-check"></i> 40 photos retouchées</li>
+                        <li><i class="fas fa-check"></i> Galerie privée en ligne</li>
+                        <li><i class="fas fa-check"></i> Livraison numérique</li>
+                        <li><i class="fas fa-check"></i> 10 photos en haute résolution</li>
+                    </ul>
+                    <a href="#reservation-form" class="btn">Réserver</a>
+                </div>
+
+                <div class="forfait-card">
+                    <div class="forfait-header">
+                        <i class="fas fa-heart"></i>
+                        <h3>Mariage</h3>
+                        <div class="price">À partir de 800€</div>
+                    </div>
+                    <ul class="forfait-features">
+                        <li><i class="fas fa-check"></i> 8h de couverture</li>
+                        <li><i class="fas fa-check"></i> 200+ photos retouchées</li>
+                        <li><i class="fas fa-check"></i> Galerie privée en ligne</li>
+                        <li><i class="fas fa-check"></i> Livraison numérique</li>
+                        <li><i class="fas fa-check"></i> Album photo premium</li>
+                    </ul>
+                    <a href="#reservation-form" class="btn">Réserver</a>
+                </div>
+            </div>
+
+            <div class="reservation-form-container" id="reservation-form">
+                <div class="form-header">
+                    <h3>Formulaire de réservation</h3>
+                    <p>Remplissez le formulaire ci-dessous pour réserver votre séance photo</p>
+                </div>
+                <form class="reservation-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nom">Nom complet</label>
+                            <input type="text" id="nom" name="nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telephone">Téléphone</label>
+                            <input type="tel" id="telephone" name="telephone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date souhaitée</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lieu">Lieu de la séance</label>
+                        <input type="text" id="lieu" name="lieu" placeholder="Ex: Parc, Studio, Extérieur...">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message (optionnel)</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Décrivez vos attentes, vos préférences..."></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" required>
+                            <span>J'accepte les conditions générales de réservation</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Envoyer la demande
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-phone"></i> +33 6 12 34 56 78</p>
+                <p><i class="fas fa-envelope"></i> contact@lemetierdephotographe.fr</p>
+                <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Le Métier de Photographe. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

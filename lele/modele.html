@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Déclaration de Modèle - Le Métier de Photographe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="model-page">
+        <div class="model-form-container">
+            <h2>Déclaration de Modèle</h2>
+            <form class="model-form">
+                <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Âge</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="sexe">Sexe</label>
+                    <select id="sexe" name="sexe" required>
+                        <option value="">Sélectionnez une option</option>
+                        <option value="masculin">Masculin</option>
+                        <option value="feminin">Féminin</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="carte-identite">Carte d'identité</label>
+                    <div class="upload-container">
+                        <input type="file" id="carte-identite" name="carte-identite" accept="image/*,.pdf" required>
+                        <label for="carte-identite" class="upload-button">
+                            <i class="fas fa-upload"></i> Carte d'identité
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="submit-button">
+                    <i class="fas fa-check"></i> Valider
+                </button>
+            </form>
+            <button class="back-button" onclick="window.location.href='concours.html'">
+                <i class="fas fa-arrow-left"></i> Retour
+            </button>
+        </div>
+    </div>
+</body>
+</html> 
